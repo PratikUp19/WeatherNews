@@ -1,10 +1,10 @@
 
   let news = {
     newsapi: 'd33f23a0acd54247b78e718931c48038',
-    fetchNews: function (nam) {
+    fetchNews: function (name) {
       fetch(
         "https://newsapi.org/v2/everything?q="+
-        nam +
+        name +
         "&from=2021-12-18&sortBy=popularity&apiKey="
         + this.newsapi
 
