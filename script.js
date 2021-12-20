@@ -45,7 +45,7 @@ let weather = {
   },
   search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
-    news.fetchNews(document.querySelector(".search-bar").value);
+  
   },
 };
 
