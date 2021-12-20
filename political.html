@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News-Political</title>
+    <link rel="stylesheet" href="news.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital@1&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="">
+        <div class="h1">
+            <h1>NEWS HEADLINES</h1>
+        </div>
+
+        
+        <div>
+            <nav class="navbar">
+                <ul>
+                    <li> <a href="news.html"><button  class="navbtn">Home</button></a> </li>
+                    <li> <a href="political.html"><button  class="navbtn">Political</button></a> </li>
+                    <li> <a href="sports.html"><button  class="navbtn">Sports</button></a> </li>
+                    <li> <a href="business.html"><button  class="navbtn">Business</button></a> </li>
+                    
+                </ul>
+            </nav>
+        </div>
+
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="Search">
+            <button class="sbtn">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em"
+                    width="1.5em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+
+        <div class="container">
+            <div class="f1">
+                <div class="tbox">
+                <h2 class="first"></h2></div>
+                <div class="fig1">
+                    <img src="" alt="" class="icon" />
+                </div>
+            </div>
+            <div class="f1">
+                <div class="tbox"> <h2 class="second"></h2></div>
+                <div class="fig2">
+                    <img src="" alt="" class="icon" />
+                </div>
+            </div>
+            <div class="f1">
+                <div class="tbox">  <h2 class="third"></h2></div>
+                <div class="fig3">
+                    <img src="" alt="" class="icon" />
+                </div>
+            </div>
+            <div class="f1">
+                <div class="tbox"> <h2 class="fourth"></h2></div>
+                <div class="fig4">
+                    <img src="" alt="" class="icon" />
+                </div>
+            </div>
+            <div class="f1">
+                <div class="tbox">  <h2 class="fifth"></h2></div>
+                <div class="fig5">
+                    <img src="" alt="" class="icon" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        let news = {
+          newsapi: 'b19e08506420f6fc3ddc25483342c196',
+          fetchNews: function (name) {
+            fetch(
+                `https://gnews.io/api/v4/search?q=${name}&token=${this.newsapi}`
+      
+            )
+            .then((response) => {
+              if (!response.ok) {
+                alert("No News found.");
+                throw new Error("No News found.");
+              }
+              return response.json();
+            })
+          // .then((data) => console.log(data));
+          .then((data) => this.displayNews(data));
+          
+        },
+      
+        displayNews: function (data) {
+          
+      
+          var url1= new Array ();
+          var title1=new Array();
+          var urlToImage1=new Array();
+          var i;
+          for(i=1;i<6;i++)
+          {
+              const {  url,title,image } = data.articles[i];
+              url1[i]=url;
+              title1[i]=title;
+              urlToImage1[i]=image;
+            
+      
+          }
+          document.querySelector(".first").innerHTML =`<a href="${url1[1]}" style="text-decoration-line:initial" >${title1[1]} </a>`;
+          document.querySelector(".fig1").innerHTML = `<img src="${urlToImage1[1]}" alt="" height= inherit width=300px> `;
+          document.querySelector(".second").innerHTML =`<a href="${url1[2]}"style="text-decoration-line:initial">${title1[2]} </a>`;
+          document.querySelector(".fig2").innerHTML = `<img src="${urlToImage1[2]}" alt="" height= inherit width=300px> `;
+          document.querySelector(".third").innerHTML =`<a href="${url1[3]}"style="text-decoration-line:initial">${title1[3]} </a>`;
+          document.querySelector(".fig3").innerHTML = `<img src="${urlToImage1[3]}" alt="" height= inherit width=300px> `;
+          document.querySelector(".fourth").innerHTML =`<a href="${url1[4]}"style="text-decoration-line:initial">${title1[4]} </a>`;
+          document.querySelector(".fig4").innerHTML = `<img src="${urlToImage1[4]}" alt="" height= inherit width=300px> `;
+          document.querySelector(".fifth").innerHTML =`<a href="${url1[5]}"style="text-decoration-line:initial">${title1[5]} </a>`;
+          document.querySelector(".fig5").innerHTML = `<img src="${urlToImage1[5]}" alt="" height= inherit width=300px> `;
+          
+      
+        },
+        search: function () {
+           this.fetchNews(document.querySelector(".search-bar").value);
+         },
+      };
+      
+      document.querySelector(".search button").addEventListener("click", function () {
+        news.search();
+      });
+      
+      document.querySelector(".search-bar").addEventListener("keyup", function (event) {
+          if (event.key == "Enter") {
+            news.search();
+          }
+        });
+        news.fetchNews("india");
+      
+          </script>
+</body>
+
+</html>
+
