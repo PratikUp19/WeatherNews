@@ -35,16 +35,45 @@
       
 
     }
+
+
+    function myFunction(x) {
+      if (x.matches) { // If media query matches
+
+            
     document.querySelector(".first").innerHTML =`<a href="${url1[1]}" style="text-decoration-line:initial" >${title1[1]} </a>`;
-    document.querySelector(".fig1").innerHTML = `<img src="${urlToImage1[1]}" alt="" height= inherit width=300px> `;
+    document.querySelector(".fig1").innerHTML = `<img src="${urlToImage1[1]}" alt="" height= 55rem width=60rem> `;
     document.querySelector(".second").innerHTML =`<a href="${url1[2]}"style="text-decoration-line:initial">${title1[2]} </a>`;
-    document.querySelector(".fig2").innerHTML = `<img src="${urlToImage1[2]}" alt="" height= inherit width=300px> `;
+    document.querySelector(".fig2").innerHTML = `<img src="${urlToImage1[2]}" alt="" height= 55rem width=60rem> `;
     document.querySelector(".third").innerHTML =`<a href="${url1[3]}"style="text-decoration-line:initial">${title1[3]} </a>`;
-    document.querySelector(".fig3").innerHTML = `<img src="${urlToImage1[3]}" alt="" height= inherit width=300px> `;
+    document.querySelector(".fig3").innerHTML = `<img src="${urlToImage1[3]}" alt="" height= 55rem width=60rem> `;
     document.querySelector(".fourth").innerHTML =`<a href="${url1[4]}"style="text-decoration-line:initial">${title1[4]} </a>`;
-    document.querySelector(".fig4").innerHTML = `<img src="${urlToImage1[4]}" alt="" height= inherit width=300px> `;
+    document.querySelector(".fig4").innerHTML = `<img src="${urlToImage1[4]}" alt="" height= 55rem width=60rem> `;
     document.querySelector(".fifth").innerHTML =`<a href="${url1[5]}"style="text-decoration-line:initial">${title1[5]} </a>`;
-    document.querySelector(".fig5").innerHTML = `<img src="${urlToImage1[5]}" alt="" height= inherit width=300px> `;
+    document.querySelector(".fig5").innerHTML = `<img src="${urlToImage1[5]}" alt="" height= 55rem width=60rem> `;
+
+    
+      } else {
+   
+        
+    document.querySelector(".first").innerHTML =`<a href="${url1[1]}" style="text-decoration-line:initial" >${title1[1]} </a>`;
+    document.querySelector(".fig1").innerHTML = `<img src="${urlToImage1[1]}" alt="" height= 250rem width=300rem> `;
+    document.querySelector(".second").innerHTML =`<a href="${url1[2]}"style="text-decoration-line:initial">${title1[2]} </a>`;
+    document.querySelector(".fig2").innerHTML = `<img src="${urlToImage1[2]}" alt="" height= 250rem width=300rem> `;
+    document.querySelector(".third").innerHTML =`<a href="${url1[3]}"style="text-decoration-line:initial">${title1[3]} </a>`;
+    document.querySelector(".fig3").innerHTML = `<img src="${urlToImage1[3]}" alt="" height= 250rem width=300rem> `;
+    document.querySelector(".fourth").innerHTML =`<a href="${url1[4]}"style="text-decoration-line:initial">${title1[4]} </a>`;
+    document.querySelector(".fig4").innerHTML = `<img src="${urlToImage1[4]}" alt="" height= 250rem width=300rem> `;
+    document.querySelector(".fifth").innerHTML =`<a href="${url1[5]}"style="text-decoration-line:initial">${title1[5]} </a>`;
+    document.querySelector(".fig5").innerHTML = `<img src="${urlToImage1[5]}" alt="" height= 250rem width=300rem> `;
+      }
+    }
+    
+    var x = window.matchMedia("(max-width: 380px)")
+    myFunction(x);
+   
+
+
   
   },
   search: function () {
