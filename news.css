@@ -1,0 +1,101 @@
+html
+{
+  font-size: 6.25%;
+}body{
+  
+  font-family: 'Source Serif 4', sans-serif;
+
+  background-color: #fff;
+  
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15rem;
+}
+
+
+input.search-bar {
+  border-radius: 30rem;
+  height: 0rem;
+  width: 60%;
+  padding: 20rem;
+  font-size: 30rem;
+  font-family: inherit;
+}
+button.sbtn{
+  border-radius: 30rem;
+  height: 44rem;
+  width: 40rem;
+  cursor: pointer;
+}
+.f1{
+  display: flex;
+  font-size: 30rem;
+  margin-left: 160rem;
+  margin-right: 160rem;
+  margin-top: 20rem;
+  border: solid #0000004f 5rem;
+  border-radius: 20rem;
+  padding: 20rem;
+
+}
+
+.h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rem;
+  background-color: #000000db;
+  height: 60rem;
+  border-radius: 35rem;
+  color: #fa4747;
+}
+
+.tbox {
+  width: 70%;
+  
+}
+
+
+
+.navbar{
+
+  display: flex;
+  justify-content: center;
+  
+}
+.navbar ul{
+  padding-inline-start: 0rem;
+  margin-block-start: 10rem;
+  margin-block-end: 0rem;
+  overflow: auto;
+}
+.navbar li{
+  float:left;
+
+  list-style: none; 
+  
+}
+.navbar li a{
+  
+  font-family: 'Source Serif 4', sans-serif;
+  padding: 0rem 0rem;
+  text-decoration: none;
+  color: black;
+  
+}
+
+
+button.navbtn {
+  font-size: 30rem;
+  font-family: 'Source Serif 4', sans-serif;
+  padding-left: 50rem;
+  padding-right: 50rem;
+  cursor: pointer;
+  color: #fa4747;
+  background-color: black;
+  
+}
