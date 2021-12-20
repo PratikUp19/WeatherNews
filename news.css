@@ -1,0 +1,98 @@
+body{
+  
+  font-family: 'Source Serif 4', sans-serif;
+  font-size: 120%;
+  background-color: #fff;
+  
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+
+input.search-bar {
+  border-radius: 30px;
+  height: 0px;
+  width: 60%;
+  padding: 20px;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.sbtn{
+  border-radius: 30px;
+  height: 44px;
+  width: 40px;
+  cursor: pointer;
+}
+.f1{
+  display: flex;
+  
+  margin-left: 160px;
+  margin-right: 160px;
+  margin-top: 20px;
+  border: solid #0000004f 5px;
+  border-radius: 20px;
+  padding: 20px;
+
+}
+
+.h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120%;
+  background-color: #000000db;
+  height: 60px;
+  border-radius: 35px;
+  color: #fa4747;
+}
+
+.tbox {
+  width: 70%;
+  
+}
+
+
+
+.navbar{
+
+  display: flex;
+  justify-content: center;
+  
+}
+.navbar ul{
+  padding-inline-start: 0px;
+  margin-block-start: 10px;
+  margin-block-end: 0px;
+  overflow: auto;
+}
+.navbar li{
+  float:left;
+
+  list-style: none; 
+  
+}
+.navbar li a{
+  
+  font-family: 'Source Serif 4', sans-serif;
+  padding: 0px 0px;
+  text-decoration: none;
+  color: black;
+  
+}
+
+
+button.navbtn {
+  font-size: 150%;
+  font-family: 'Source Serif 4', sans-serif;
+  padding-left: 50px;
+  padding-right: 50px;
+  cursor: pointer;
+  color: #fa4747;
+  background-color: black;
+  
+}
