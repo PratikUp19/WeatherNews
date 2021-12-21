@@ -91,5 +91,5 @@ document.querySelector(".search-bar").addEventListener("keyup", function (event)
     }
   });
 
-  news.fetchNews("space nasa");
+  news.fetchNews("india");
 
