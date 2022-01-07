@@ -1,9 +1,9 @@
 
   let news = {
     newsapi: 'b19e08506420f6fc3ddc25483342c196',
-    fetchNews: function (name) {
+    fetchNews: function () {
       fetch(
-        `https://gnews.io/api/v4/search?q=${name}&token=${this.newsapi}`
+        `https://gnews.io/api/v4/top-headlines?&lang=en&token=${this.newsapi}`
         
       )
       .then((response) => {
@@ -91,5 +91,5 @@ document.querySelector(".search-bar").addEventListener("keyup", function (event)
     }
   });
 
-  news.fetchNews("india");
+  news.fetchNews();
 
